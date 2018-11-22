@@ -408,7 +408,7 @@ m.sendMessage(args)
 }
 });
 client.on("message", message => {
-    var prefix = "+";
+    var prefix = "*";
  if (message.content === "*help") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM")
@@ -425,15 +425,15 @@ ${prefix}help-en
    });
  
    client.on("message", message => {
- if (message.content === "+help-ar") {
+ if (message.content === "*help-ar") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM")
       .setDescription(`
      
             اختر:
  
-+help-gn-ar ⇏ اوامر عامة
-+help-ad-ar ⇏ اوامر ادارة السيرفر
+*help-gn-ar ⇏ اوامر عامة
+*help-ad-ar ⇏ اوامر ادارة السيرفر
              
 `)
 message.channel.sendEmbed(embed)
@@ -442,7 +442,7 @@ message.channel.sendEmbed(embed)
 });
  
 client.on("message", message => {
-    if (message.content === "+help-en") {
+    if (message.content === "*help-en") {
      const embed = new Discord.RichEmbed()  
          .setColor("RANDOM")
          .setDescription(`
@@ -460,15 +460,15 @@ client.on("message", message => {
    });
  
    client.on("message", message => {
-    var prefix = "+";
- if (message.content === "+help-gn-ar") {
+    var prefix = "*";
+ if (message.content === "*help-gn-ar") {
      message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
              
 ===================== اوامر عامة =====================
-+server ➾ سرعة اتصالك بالانترنت
+*bot ➾ سرعة اتصالك بالانترنت
 *image ➾ صورة السيرفر
 =========================================================
 **و قريبا المزيد من الاوامر**
@@ -493,7 +493,7 @@ Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
       .setDescription(`
              
 ==================== General commands =====================
-+server ➾ bot details
+*bot ➾ bot details
 *image ➾ server image
 =========================================================
 More commands soon
@@ -514,13 +514,13 @@ Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
       .setDescription(`
              
 ==================== اوامر ادارية =====================
-+mute ➾ اعطاء ميوت لشخص
-+unmute ➾ الغاء الميوت من شخص
-+clear ➾ حذف الرسائل
-+ban ➾ اعطاء باند
-+kick ➾ الطرد من السيرفر
-+mc ➾ قفل الشات
-+umc ➾ فتح الشات
+*mute ➾ اعطاء ميوت لشخص
+*unmute ➾ الغاء الميوت من شخص
+*clear ➾ حذف الرسائل
+*ban ➾ اعطاء باند
+*kick ➾ الطرد من السيرفر
+*mutechannel ➾ قفل الشات
+*unmutechannel ➾ فتح الشات
 =========================================================
 وقريباً المزيد من الاكواد
 =========================================================
@@ -540,13 +540,13 @@ const embed = new Discord.RichEmbed()
    .setDescription(`
          
 ==================== Management commands =====================
-+mute ➾ give mute
-+unmute ➾ unmute
-+clear ➾ clear all messages
-+ban ➾ give ban
-+kick ➾ kick members from server
-+mc ➾ close chat
-+umc ➾ open chat
+*mute ➾ give mute
+*unmute ➾ unmute
+*clear ➾ clear all messages
+*ban ➾ give ban
+*kick ➾ kick members from server
+*mutechannel ➾ close chat
+*unmutechannel ➾ open chat
 =========================================================
 More commands soon
 =========================================================
@@ -556,7 +556,6 @@ message.author.sendEmbed(embed)
  
 }
 });
-
 
 
 
