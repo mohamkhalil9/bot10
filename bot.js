@@ -524,6 +524,7 @@ Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
 =========================================================
 وقريباً المزيد من الاكواد
 =========================================================
+غير "*"لا "+"
 Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
 `)
    message.author.sendEmbed(embed)
