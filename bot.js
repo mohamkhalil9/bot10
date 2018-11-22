@@ -290,7 +290,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 });
 
 client.on('message', message => {
-    var prefix = "+";
+    var prefix = "*";
    
         if (message.author.id === client.user.id) return;
         if (message.guild) {
@@ -303,6 +303,9 @@ client.on('message', message => {
     }
             message.guild.members.forEach(m => {
        if(!message.member.hasPermission('ADMINISTRATOR')) return;
+                var bc = new Discord.RichEmbed()
+                .addField('» السيرفر :', `${message.guild.name}`)
+                .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
                 .addField(' » الرسالة : ', args)
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
