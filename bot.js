@@ -837,7 +837,7 @@ client.on("message", (message) => {
  
        message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`g!confirm\`. This will time out in 10 seconds and be cancelled.`)
            .then((m) => {
-               message.channel.awaitMessages(response => response.content === 'g!confirm', {
+               message.channel.awaitMessages(response => response.content === '+close', {
                        max: 1,
                        time: 10000,
                        errors: ['time'],
