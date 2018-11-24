@@ -783,7 +783,7 @@ message.channel.sendEmbed(id);
 
 
 client.on('message', message => {
-if(message.content.startsWith(">slots")) {
+if(message.content.startsWith("+slots")) {
 let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
 let slot2 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
 let slot3 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
