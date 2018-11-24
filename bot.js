@@ -662,7 +662,124 @@ message.channel.sendEmbed(id);
 });
 
 
-
+ client.on('message', message => {
+  var prefix = "+";
+ if (message.content.startsWith(prefix + 'help')) {
+     let pages = [
+ 	`=-=-=-=-=-=** 🌍 Public Commands - اوامر عامة 🌍 **=-=-=-=-=-=
+**     ❖ +id ======> To Show Your ID | ايدي حسابك
+     ❖ +ping ====> Ping Of Bot | بنج حك البوت
+     ❖ +info =====> Information Of The Bot | معلومات البوت
+     ❖ +server ==> Information Of The Server | معلومات السيرفر
+     ❖ +cal =====> To Calculate | اله لحاسبة 
+     ❖ +rooms ===> Show Rooms Of Server | اضهار الرومات الي في السيرفر
+     ❖ +roles ===> Show Roles Of The Server | اضهار الرانكات
+     ❖ +emojis ==> Emoji Of Server | ايموجيات السيرفر   
+     ❖ +say =====> The Bot Say Any Thing | تكرار اي شي كتبتو
+     ❖ +ser-av ===> To Show Image Of Server | لاضهار صورة السيرف 
+     ❖ +embed ===> To Embed | لتكرار اي شي كتبتو بطريقة حلوة
+     ❖ +avatar ==> Your Avatar |صورتك الشخصية
+**
+     ===========================================================
+       React With ▶ To See Admins Commands`,
+ 	`=-=-=-=-=-= **🔧  Admin Commands - اوامر ادارية 🔧** =-=-=-=-=-=
+     **❖ +move @user => Move User To Your Room Voice | لسحب الشخص الى روومك
+     ❖ +mvall => Move All To Your Room Voice | لسحب الجميع الي روومك
+     ❖ +bc => Broadcast | رسالة جماعية الى كل اعضاء السيرفر
+     ❖ +role @user <rank> => Give User Rank | لأعطاء رتبة لعضو معين
+     ❖ +roleremove @user <rank> => remove Rank From User | لازالة الرتبة من شخص معين
+     ❖ +role all <rank> => Give All Rank | لأعطاء رتبة للجميع
+     ❖ +role humans <rank> => Give Humans Rank | لأعطاء رتبة للاشخاص فقط
+     ❖ +role bots <rank> => Give Bots Rank | لأعطاء رتبة لجميع البوتات
+     ❖ +clear => Clear Chat | مسح الشات
+     ❖ +mute @user <reason> => Mute User | اعطاء العضو ميوت لازم رتبة <Muted>
+     ❖ +unmute @user => Unmute User | لفك الميوت عن الشخص 
+     ❖ +kick @user <reason> => Kick User From Server | طرد الشخص من السيرفر
+     ❖ +ban @user <reason> => Ban User From Server | حضر الشخص من السيرفر
+     ❖ +mct => Mute Channel | تقفيل الشات
+     ❖ +unmct => Unmute Channel | فتح الشات
+     ❖ +kv @user => Voice Kick | يطرد شخص من الرووم
+     ❖ +vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين
+     ❖ +bans  ==> ban list | الاشخاص الي تبندو
+     ** 
+     ===========================================================
+       React With ▶ To See Games Commands`,
+ 	`=-=-=-=-=-= **  Games Commands - اوامر الالعاب  ** =-=-=-=-=-=
+**   ❖ +xo @user => Game XO | لعب اكس او
+     ❖ +rps => Rock & Paper & Scissors | لعبة حجر ورقة مقص
+     ❖ +slots => Game Of Fruits | لعبة الفواكه
+     ❖ +زواج @user => لعبة الزواج
+     ❖ +speed => لعبة سرعة كتابة 
+     ❖ +لعبة فكك <= فكك
+     ❖ +لعبة عواصم <= عواصم
+     ❖ +البوت يعطيك نصائح <= هل تعلم
+     ❖ +skin => Ur Mc Skin
+     ❖ +لو خيروك => Funny Game Yay
+**
+      ===========================================================
+	  React With ▶ To See Music Commands`,
+	`=-=-=-=-=-=  ** :musical_note: Music Commands  -  اوامر الاغاني :musical_note:**  =-=-=-=-=-=
+**	 ❖ +p => For Start Music | لتشغيل الاغاني
+	 ❖ +s => For Skip Music | لتخطي الاغنية
+	 ❖ +stop => For Stop Music | لأيقاف الاغنية
+     ❖ +vol => For Reduce or Raise The Sound | لخفض او رفع الصوت
+     ❖ +np => For See Name Music | لكي ترى اسم الاغنية
+     ❖ +q => To See The Music In The Queue | لكي ترا الاغاني التي في قائمة الانتظار
+     ❖ +pa => For Pause The Music | لأيقاف الاغنية مؤقتنا
+     ❖ +r => For Play Back The Music agin after its end | لأعادة تشغيل الاغنية بعد توقفها
+**
+	 ===========================================================
+       React With ▶ To See Quran Commands`,
+	`=-=-=-=-=-= ** :kaaba: Quran Commands  -  اوامر القرأن :kaaba:**  =-=-=-=-=-=
+   **  ❖+قران => For Start Quran | لتشغيل القرأن
+	 ❖:regional_indicator_a: القرآن كاملاً ماهر المعيقلي
+     ❖:regional_indicator_b: سورة البقرة كاملة للشيخ مشاري العفاسي
+     ❖:regional_indicator_c: سورة الكهف كاملة بصوت مشارى بن راشد العفاسي
+     ❖:stop_button: لإيقاف القرآن الكريم
+     ❖:regional_indicator_d: القرآن كاملاً عبدالباسط عبدالصمد
+     ❖:regional_indicator_e: القرآن كاملاً ياسر الدوسري
+     ❖:regional_indicator_f: سورة الواقعه بصوت الشيخ مشاري بن راشد العفاسي
+ 	    DgPro**`]
+ 	let page = 1;
+ 
+     let embed = new Discord.RichEmbed()
+     .setColor('RANDOM')
+     .setFooter(`Page ${page} of ${pages.length}`)
+     .setDescription(pages[page-1])
+ 
+     message.channel.sendEmbed(embed).then(msg => {
+ 
+         msg.react('◀').then( r => {
+             msg.react('▶')
+ 
+ 
+         const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+         const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+ 
+ 
+         const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
+         const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
+ 
+ 
+ 
+         backwards.on('collect', r => {
+             if (page === 1) return;
+             page--;
+             embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page ${page} of ${pages.length}`);
+             msg.edit(embed)
+         })
+         forwards.on('collect', r => {
+             if (page === pages.length) return;
+             page++;
+             embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page ${page} of ${pages.length}`);
+             msg.edit(embed)
+         })
+         })
+     })
+     }
+ });
 
 
 
