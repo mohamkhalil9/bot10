@@ -931,7 +931,7 @@ client.on('message', Sal => { // By : !!!,RaaXe ? ,??
   .setFooter(client.user.tag, client.user.avatarURL, true)
   .addField('تاق البوت', client.user.discriminator, true)
   .addField('ايدي البوت', client.user.id, true)
-.addField('     ** ? ! -|BD ,ana pro#3996 ?  ** ' ,' **  !!!,RaaXe ? ,??#8352 ** ')
+.addField('     ** ? bot_owner ?  ** ' ,' **  ! -|BD ,ana pro#3996 ** ')
   Sal.channel.sendEmbed(embed);
 }
 });
