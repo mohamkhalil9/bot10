@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`pro wolf system`,"http://twitch.tv/Death Shop")
+client.user.setGame(`+help || +inv`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -895,7 +895,16 @@ reaction2.on("collect", r => {
 }
 });
 
-
+client.on('message', message => {
+        if (message.content === "+inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(『| ${message.author.username} |』, message.author.avatarURL)
+        .setTitle(اضغط هنا لدعوه البوت)
+        .setURL(https://discordapp.com/api/oauth2/authorize?client_id=513589898381361167&permissions=0&scope=bot)
+     message.channel.sendEmbed(embed);
+       }
+   });
 
 
 
