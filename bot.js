@@ -923,7 +923,7 @@ client.on('message', message => {
    });
 
 client.on('message', Sal => { // By : !!!,RaaXe ? ,??
-  if(Sal.content === '$bot-info') { //هنا تغير البرفيكس
+  if(Sal.content === '+bot-info') { //هنا تغير البرفيكس
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setThumbnail(client.user.avatarURL)
