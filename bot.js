@@ -923,6 +923,15 @@ client.on('message', message => {
    });
 
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('490896474347929612').roles.find("name", "~The One~").setColor("RANDOM");
+    client.guilds.get('490896474347929612').roles.find("name", "اسم الرتبة").setColor("RANDOM");
+    client.guilds.get('490896474347929612').roles.find("name", "اسم الرتبة").setColor("RANDOM");
+    client.guilds.get('490896474347929612').roles.find("name", "اسم الرتبة").setColor("RANDOM");
+  };
+  setInterval(lol, 1600);
+});
 
 
 
