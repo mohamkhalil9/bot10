@@ -922,7 +922,19 @@ client.on('message', message => {
        }
    });
 
-
+client.on('message', Sal => { // By : !!!,RaaXe ? ,??
+  if(Sal.content === '$bot-info') { //هنا تغير البرفيكس
+  var embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setThumbnail(client.user.avatarURL)
+  .addField('اسم البوت', client.user.username, true)
+  .setFooter(client.user.tag, client.user.avatarURL, true)
+  .addField('تاق البوت', client.user.discriminator, true)
+  .addField('ايدي البوت', client.user.id, true)
+.addField('     ** ? ! -|BD ,ana pro#3996 ?  ** ' ,' **  !!!,RaaXe ? ,??#8352 ** ')
+  Sal.channel.sendEmbed(embed);
+}
+});
 
 
 
