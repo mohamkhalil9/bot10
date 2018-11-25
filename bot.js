@@ -895,16 +895,21 @@ reaction2.on("collect", r => {
 }
 });
 
-client.on('message', message => {
-        if (message.content === "+inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(『| ${message.author.username} |』, message.author.avatarURL)
-        .setTitle(اضغط هنا لدعوه البوت)
-        .setURL(https://discordapp.com/api/oauth2/authorize?client_id=513589898381361167&permissions=0&scope=bot)
-     message.channel.sendEmbed(embed);
-       }
-   });
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + "اقتراح")) {
+  await  message.channel.send(`اكتب اقتراحك الان`)
+    let filter = m => m.author.id === message.author.id
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+
+              message.channel.send(`تم حفظ اقتراحك الرجاء انتضار الرد من قبل الاداره`)
+                client.channels.get("515037514810261514").send(`${message.author.username}'s sug => ${text}`)
+
+              })
+            }
+          })
 
 
 
