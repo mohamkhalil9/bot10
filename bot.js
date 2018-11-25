@@ -911,7 +911,16 @@ client.on('message', async message => {
             }
           })
 
-
+client.on('message', message => {
+        if (message.content === "+inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(`『| ${message.author.username} |』`, message.author.avatarURL)      
+        .setTitle(`اضغط هنا لدعوه البوت`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513589898381361167&permissions=0&scope=bot`)
+     message.channel.sendEmbed(embed);
+       }
+   });
 
 
 
