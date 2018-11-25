@@ -896,7 +896,7 @@ reaction2.on("collect", r => {
 });
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "اقتراح")) {
+  if(message.content.startsWith(prefix + "sugg")) {
   await  message.channel.send(`اكتب اقتراحك الان`)
     let filter = m => m.author.id === message.author.id
       var text = '';
