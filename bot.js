@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "+";
+var prefix = "W";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
@@ -8,13 +8,13 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`+help || +inv`,"http://twitch.tv/Death Shop")
+client.user.setGame(`Whelp || Winv`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "+";
+ var prefix= "W";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
@@ -80,7 +80,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 client.on('message', message => {
 
-    if (message.content === "+mc") {
+    if (message.content === "Wmc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -91,7 +91,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ? ")
            });
              }
-if (message.content === "+umc") {
+if (message.content === "Wumc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -108,7 +108,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 client.on('message', message => {
-const prefix = "+";
+const prefix = "W";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -290,7 +290,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 });
 
 client.on("message", message => {
-    var prefix = "W";
+    var prefix = "Ws";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
@@ -318,7 +318,7 @@ client.on("message", message => {
         }
     });
 client.on('message', message => {
- var prefix = "+"
+ var prefix = "W"
     if(message.content.startsWith(prefix + 'new')) {
         let args = message.content.split(' ').slice(1).join(' ');
         let support = message.guild.roles.find("name","Support Team");
@@ -399,166 +399,17 @@ client.on('message', message => {
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('+bc-users')){
-if(!message.author.id === 'اي دي صاحب البوت') return;
+if (message.content.startsWith('Wbc-users')){
+if(!message.author.id === '461059496861630465') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
 }
 });
-client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*help") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM")
-      .setDescription(`
-     
-             Please Select Your Language
-${prefix}help-ar
-${prefix}help-en
-             
-      `)
-   message.channel.sendEmbed(embed)
-   
-   }
-   });
- 
-   client.on("message", message => {
- if (message.content === "*help-ar") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM")
-      .setDescription(`
-     
-            اختر:
- 
-*help-gn-ar ⇏ اوامر عامة
-*help-ad-ar ⇏ اوامر ادارة السيرفر
-             
-`)
-message.channel.sendEmbed(embed)
- 
-}
-});
- 
-client.on("message", message => {
-    if (message.content === "*help-en") {
-     const embed = new Discord.RichEmbed()  
-         .setColor("RANDOM")
-         .setDescription(`
-         
-              Chose:
-               
-   ##help-gn-en ⇏ General commands
-   
-   ##help-ad-en ⇏ Server management commands
-               
-   `)
-   message.channel.sendEmbed(embed)
-   
-   }
-   });
- 
-   client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*help-gn-ar") {
-     message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription(`
-             
-===================== اوامر عامة =====================
-*bot ➾ سرعة اتصالك بالانترنت
-*image ➾ صورة السيرفر
-=========================================================
-**و قريبا المزيد من الاوامر**
-=========================================================
-Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
-`)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
- 
- 
- 
- 
- 
-   client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*help-gn-en") {
-     message.channel.send('**Check your dm** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription(`
-             
-==================== General commands =====================
-*bot ➾ bot details
-*image ➾ server image
-=========================================================
-More commands soon
-=========================================================
-Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
-`)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
- 
-   client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*help-ad-ar") {
-     message.channel.send('**تم ارسال رسالة بالخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription(`
-             
-==================== اوامر ادارية =====================
-*mute ➾ اعطاء ميوت لشخص
-*unmute ➾ الغاء الميوت من شخص
-*clear ➾ حذف الرسائل
-*ban ➾ اعطاء باند
-*kick ➾ الطرد من السيرفر
-*mutechannel ➾ قفل الشات
-*unmutechannel ➾ فتح الشات
-=========================================================
-وقريباً المزيد من الاكواد
-=========================================================
-غير "*"لا "+"
-Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
-`)
-   message.author.sendEmbed(embed)
-   
-}
-});
- 
-client.on("message", message => {
- var prefix = "*";
-if (message.content === "*help-ad-en") {
-  message.channel.send('**Check your dm** :mailbox_with_mail: ');
-const embed = new Discord.RichEmbed()
-   .setColor("RANDOM")
-   .setDescription(`
-         
-==================== Management commands =====================
-*mute ➾ give mute
-*unmute ➾ unmute
-*clear ➾ clear all messages
-*ban ➾ give ban
-*kick ➾ kick members from server
-*mutechannel ➾ close chat
-*unmutechannel ➾ open chat
-=========================================================
-More commands soon
-=========================================================
-Support server : https://discord.gg/Fq233KJ - https://discord.gg/KPpVGvv
-`)
-message.author.sendEmbed(embed)
- 
-}
-});
+
 client.on("message", msg => {
-    var prefix = "+";
+    var prefix = "W";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -578,7 +429,7 @@ msg.channel.send({embed: embed})
 });
 
 client.on("message", message => {
-    if (message.content === "+rules") {
+    if (message.content === "Wrules") {
            message.react("✅")
               message.react("❌")
      const embed = new Discord.RichEmbed() 
@@ -663,7 +514,7 @@ message.channel.sendEmbed(id);
 
 
  client.on('message', message => {
-  var prefix = "+";
+  var prefix = "W";
  if (message.content.startsWith(prefix + 'help')) {
      let pages = [
  	`=-=-=-=-=-=** 🌍 Public Commands - اوامر عامة 🌍 **=-=-=-=-=-=
@@ -783,7 +634,7 @@ message.channel.sendEmbed(id);
 
 
 client.on('message', message => {
-if(message.content.startsWith("+slots")) {
+if(message.content.startsWith("Wslots")) {
 let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
 let slot2 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
 let slot3 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
@@ -832,7 +683,7 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("+close")) {
+  if (message.content.startsWith("Wclose")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
        message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`+close\`. This will time out in 10 seconds and be cancelled.`)
@@ -912,7 +763,7 @@ client.on('message', async message => {
           })
 
 client.on('message', message => {
-        if (message.content === "+inv") {
+        if (message.content === "Winv") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(`『| ${message.author.username} |』`, message.author.avatarURL)      
@@ -923,7 +774,7 @@ client.on('message', message => {
    });
 
 client.on('message', Sal => { // By : !!!,RaaXe ? ,??
-  if(Sal.content === '+bot-info') { //هنا تغير البرفيكس
+  if(Sal.content === 'Wbot-info') { //هنا تغير البرفيكس
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setThumbnail(client.user.avatarURL)
@@ -937,7 +788,7 @@ client.on('message', Sal => { // By : !!!,RaaXe ? ,??
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("+avatar")) {
+    if (message.content.startsWith("Wavatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -954,7 +805,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-      if(message.content.startsWith ("+marry")) {
+      if(message.content.startsWith ("Wmarry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
      
@@ -983,7 +834,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
 
 client.on('message', message => {
-var prefix = "+"
+var prefix = "W"
         if(message.content.startsWith(prefix + 'hypixel')) {
             let args = message.content.split(' ').slice(1).join(' ');
             if (!args) return message.channel.send("**رجأء ضع اسمك في ماين كرافت. ?**");
