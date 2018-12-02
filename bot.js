@@ -913,11 +913,6 @@ hours = 12;
 
 
 
- client.on('message', msg => {//msg
-    if (msg.content === `${prefix}colors`) {
-      msg.channel.send({file : "رابط الصورة حق الالوان"})
-    }
-
 
 
 
