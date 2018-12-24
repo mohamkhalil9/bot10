@@ -923,6 +923,25 @@ client.on('message', message => {
       .addField('.',`${message.guild.memberCount}`)
       message.channel.send(IzRo);
     });
+client.on("message", message => {
+  if(message.content.startsWith("Wverify")) { // الامر والبريفكس
+    let num = Math.floor((Math.random() * 4783) + 10);
+ 
+        message.channel.send(`**يرجاء كتابة الرقم التالي:** **${num}**`).then(m => {
+      message.channel.awaitMessages(res => res.content == `${num}`, {
+        max: 1,
+        time: 60000,
+        errors: ['time'],
+      }).then(collected => {
+        message.delete();
+        m.delete();
+        message.member.addRole(message.guild.roles.find(c => c.name == "Mēmbër's |√")); // اسم الرتبة
+      }).catch(() => {
+        m.edit(`لقد أخذت وقتًا طويلاً لكتابة الرقم.  قم بإعادة كتابة الأمر مرة أخرى إذا كنت تريد التحقق من هويتك..`).then(m2 => m.delete(15000));
+      });
+    });
+  }
+});
 
 
 
