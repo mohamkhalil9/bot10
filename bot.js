@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "W";
+var prefix = "-";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
@@ -14,7 +14,7 @@ client.user.setStatus("dnd")
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "W";
+ var prefix= "-";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
@@ -91,7 +91,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ? ")
            });
              }
-if (message.content === "Wumc") {
+if (message.content === "-umc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -108,7 +108,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 client.on('message', message => {
-const prefix = "W";
+const prefix = "-";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -290,7 +290,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 });
 
 client.on("message", message => {
-    var prefix = "Ws";
+    var prefix = "-";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
@@ -332,7 +332,7 @@ m.sendMessage(args)
 });
 
 client.on("message", msg => {
-    var prefix = "W";
+    var prefix = "-";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -437,7 +437,7 @@ message.channel.sendEmbed(id);
 
 
  client.on('message', message => {
-  var prefix = "W";
+  var prefix = "-";
  if (message.content.startsWith(prefix + 'help')) {
      let pages = [
  	`=-=-=-=-=-=** 🌍 Public Commands - اوامر عامة 🌍 **=-=-=-=-=-=
@@ -757,7 +757,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
 
 client.on('message', message => {
-var prefix = "W"
+var prefix = "-"
         if(message.content.startsWith(prefix + 'hypixel')) {
             let args = message.content.split(' ').slice(1).join(' ');
             if (!args) return message.channel.send("**رجأء ضع اسمك في ماين كرافت. ?**");
